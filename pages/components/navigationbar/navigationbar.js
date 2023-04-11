@@ -1,6 +1,5 @@
 import React from "react";
 import { Box } from "@mui/system";
-import { Image } from "mui-image";
 import { useState } from "react";
 import printscreenlogo from "./printscreenlogo.png";
 import { FitScreen } from "@mui/icons-material";
@@ -8,7 +7,7 @@ import { Button } from "@mui/material";
 import Typography from "@mui/material";
 import { AppBar, Toolbar } from "@mui/material";
 
-export function NavigationBar() {
+export default function NavigationBar() {
   return (
     <AppBar position="static" sx={{ background: "white" }}>
       <Toolbar>
@@ -42,7 +41,7 @@ export function NavigationBar() {
               flexDirection: "row",
             }}
           >
-            <Button
+            {/* <Button
               variant="text"
               onClick={console.log("about us page")}
               sx={{
@@ -56,7 +55,7 @@ export function NavigationBar() {
             </Button>
             <Button sx={{ p: "40px", color: "black" }}>
               <Box>Contact</Box>
-            </Button>
+            </Button> */}
           </Box>
         </Box>
       </Toolbar>

@@ -13,11 +13,12 @@ import {
 } from "@mui/icons-material";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { UnderConstruction } from "./underConstruction";
-import { AboutUs } from "./abooutUs";
-import { OurNoodles } from "./ournoodles";
+import UnderConstruction from "./underConstruction";
+import AboutUs  from "./abooutUs";
+import OurNoodles  from "./ournoodles";
 import { useEffect } from "react";
-export function ContentContainer() {
+
+export default function ContentContainer() {
   useEffect(() => {
     Aos.init({ duration: "3000" });
   });
@@ -29,11 +30,9 @@ export function ContentContainer() {
         flexDirection: "column",
       }}
     >
-      <AboutUs data-aos="fade-up" />
-      <OurNoodles/>
+      {/* <AboutUs data-aos="fade-up" />
+      <OurNoodles/> */}
       <UnderConstruction data-aos="fade-up" />
-   
-
     </Box>
   );
 }
