@@ -6,7 +6,7 @@ import { Box, flexbox, width } from "@mui/system";
 import { TextField, Typography } from "@mui/material";
 import dog from "./dog.png";
 import noodles3 from "./noodles3.jpg";
-import noodles2 from "./noodles2.png";
+import noodles4 from "./noodles4.jpg";
 import {
   Instagram,
   LinkedIn,
@@ -17,7 +17,7 @@ import {
   Height,
 } from "@mui/icons-material";
 
-export function OurNoodles() {
+export default function OurNoodles() {
   useEffect(() => {
     Aos.init({ duration: "2500" });
   });
@@ -59,7 +59,7 @@ export function OurNoodles() {
       <Box
         id="image"
         component="img"
-        src={noodles2.src}
+        src={noodles4.src}
         sx={{
           display: "flex",
           flex: "flex-basis",

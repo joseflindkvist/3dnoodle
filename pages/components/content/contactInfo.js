@@ -19,7 +19,7 @@ import {
 } from "@mui/icons-material";
 import Aos from "aos";
 
-export function ContactInfo() {
+export default function ContactInfo() {
   useEffect(() => {
     Aos.init({ duration: "2500" });
   });

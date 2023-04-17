@@ -11,7 +11,7 @@ import {
   Book,
 } from "@mui/icons-material";
 
-export function UnderConstruction(){
+export default function UnderConstruction(){
     return(
         <Box
         sx={{

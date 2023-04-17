@@ -21,7 +21,7 @@ import {
 } from "@mui/icons-material";
 import Aos from "aos";
 
-export function WhyNoodles() {
+export default function WhyNoodles() {
   useEffect(() => {
     Aos.init({ duration: "2500" });
   });

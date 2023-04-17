@@ -19,7 +19,7 @@ import {
 } from "@mui/icons-material";
 import Aos from "aos";
 
-export function AboutUs() {
+export default function AboutUs() {
   useEffect(() => {
     Aos.init({ duration: "2500"});
   });
