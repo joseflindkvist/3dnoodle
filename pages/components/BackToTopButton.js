@@ -2,11 +2,11 @@ import { Box, Button } from "@mui/material";
 import React from "react";
 import { useEffect, useState } from "react";
 import { ArrowUpward } from "@mui/icons-material";
-import ArrowCircleUpOutlinedIcon from '@mui/icons-material/ArrowCircleUpOutlined';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import ArrowCircleUpOutlinedIcon from "@mui/icons-material/ArrowCircleUpOutlined";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import AppBar from "@mui/material";
 
-export function BackToTopButton() {
+export default function BackToTopButton() {
   const [backToTopButton, setbackToTopButton] = useState(false);
 
   useEffect(() => {
@@ -20,7 +20,6 @@ export function BackToTopButton() {
   }, []);
 
   const scrollUp = () => {
-
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -30,8 +29,15 @@ export function BackToTopButton() {
   return (
     <Box>
       {backToTopButton && (
-        <Button onClick={scrollUp} sx={{ color: "grey", display:"flex" }} position>
-          <KeyboardArrowUpIcon fontSize="large" sx={{fontSize:"65px", p:"15"}} />
+        <Button
+          onClick={scrollUp}
+          sx={{ color: "grey", display: "flex" }}
+          position
+        >
+          <KeyboardArrowUpIcon
+            fontSize="large"
+            sx={{ fontSize: "65px", p: "15" }}
+          />
         </Button>
       )}
     </Box>

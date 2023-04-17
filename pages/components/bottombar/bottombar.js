@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { BackToTopButton } from "../BackToTopButton";
+import BackToTopButton from "../BackToTopButton";
 import { AppBar } from "@mui/material";
 import { Color } from "@mui/material";
 
-export function BottomBar() {
+export default function BottomBar() {
   return (
     <Box>
       <AppBar

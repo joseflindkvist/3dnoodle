@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Button } from "@mui/material";
 
-export function NaviagtionButton(props) {
+export default function NaviagtionButton(props) {
   function createbutton() {
     return (
       <Button

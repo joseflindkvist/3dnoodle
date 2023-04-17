@@ -1,18 +1,17 @@
 import React from "react";
 import { Box } from "@mui/system";
-import { Image } from "mui-image";
 import { useState } from "react";
 import logo1 from "./logo1.png";
 import { FitScreen } from "@mui/icons-material";
 import { Button, duration } from "@mui/material";
 import Typography from "@mui/material";
 import { AppBar, Toolbar } from "@mui/material";
-import { NaviagtionButton } from "../navigationButton";
+import NaviagtionButton from "../navigationButton";
 import { ContentContainer } from "../content/contentcontainer";
 import { AboutUs } from "../content/abooutUs";
 import { OurNoodles } from "../content/ournoodles";
 
-export function NavigationBar() {
+export default function NavigationBar() {
   function scrollElement(id) {
     console.log(id);
     var element = document.getElementById(id);
