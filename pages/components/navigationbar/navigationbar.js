@@ -1,6 +1,5 @@
 import React from "react";
 import { Box } from "@mui/system";
-import { Image } from "mui-image";
 import { useState } from "react";
 import logo1 from "./logo1.png";
 import { FitScreen } from "@mui/icons-material";
@@ -12,6 +11,7 @@ import { ContentContainer } from "../content/contentcontainer";
 import { AboutUs } from "../content/abooutUs";
 import { OurNoodles } from "../content/ournoodles";
 
+
 export function NavigationBar() {
   function scrollElement(id) {
     console.log(id);
@@ -21,6 +21,7 @@ export function NavigationBar() {
       element.scrollIntoView({ behavior: "smooth", duration: "2000" });
     }
   }
+
 
   return (
     <Box>
@@ -44,6 +45,7 @@ export function NavigationBar() {
               justifyContent: "space-between",
             }}
           >
+
             <Box
               component="img"
               src={logo1.src}
@@ -57,6 +59,7 @@ export function NavigationBar() {
             ></Box>
             <Box
               id="nav_buttons"
+
               sx={{
                 p: "10px",
                 justifyContent: "space-between",
@@ -64,6 +67,7 @@ export function NavigationBar() {
                 flexDirection: "row",
               }}
             >
+
               <Button
                 onClick={() => {
                   scrollElement("aboutus");
@@ -89,6 +93,7 @@ export function NavigationBar() {
                 contact
               </Button>
             </Box>
+
           </Box>
         </Toolbar>
       </AppBar>

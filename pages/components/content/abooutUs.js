@@ -60,6 +60,7 @@ export default function AboutUs() {
           textAlign: "center",
         }}
       >
+
         <Typography
           sx={{ fontSize: 25, py: "30px", fontFamily: [""], fontWeight: "" }}
         >
@@ -70,6 +71,7 @@ export default function AboutUs() {
           triangle-shaped fabric called noodles or fillers. It is a new Spin-off
           from Biteam AB.
         </Typography>
+
       </Box>
     </Box>
   );

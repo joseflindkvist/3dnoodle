@@ -10,11 +10,13 @@ import {
   LinkedCameraOutlined,
   Book,
 } from "@mui/icons-material";
+
 import { NavigationBar } from "./components/navigationbar/navigationbar";
 import { UnderConstruction } from "./components/content/underConstruction";
 import { ContentContainer } from "./components/content/contentcontainer";
 import { BackToTopButton } from "./components/BackToTopButton";
 import { BottomBar } from "./components/bottombar/bottombar";
+
 
 const MaintenancePage = () => {
   return (
