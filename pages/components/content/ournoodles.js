@@ -3,8 +3,10 @@ import { useEffect } from "react";
 import Aos from "aos";
 import styled from "styled-components";
 import { Box, flexbox, width } from "@mui/system";
-import { TextField } from "@mui/material";
+import { TextField, Typography } from "@mui/material";
 import dog from "./dog.png";
+import noodles3 from "./noodles3.jpg";
+import noodles4 from "./noodles4.jpg";
 import {
   Instagram,
   LinkedIn,
@@ -17,13 +19,14 @@ import {
 
 export default function OurNoodles() {
   useEffect(() => {
-    Aos.init({ duration: "3000" });
+    Aos.init({ duration: "2500" });
   });
   return (
     <Box
-    //   data-aos="fade-up"
+      id="noodles"
+      data-aos="fade"
       sx={{
-        width: "100%",
+        width: "100vw",
         height: "100vh",
         display: "flex",
         alignItems: "center",
@@ -31,18 +34,6 @@ export default function OurNoodles() {
         flexDirection: "reverse-row",
       }}
     >
-      <Box
-        id="image"
-        component="img"
-        src={dog.src}
-        sx={{
-          display: "flex",
-          flex: "flex-basis",
-          p: "15px",
-          flexBasis: "auto",
-          maxWidth: "30%",
-        }}
-      ></Box>
       <Box
         id="text"
         sx={{
@@ -52,19 +43,33 @@ export default function OurNoodles() {
           justifyContent: "space-between",
           color: "black",
           p: "0px",
+          textAlign: "center",
         }}
       >
-        <Box sx={{ py: "30px" }}>ABOUT US</Box>
-        <Box sx={{ p: "" }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Box>
+
+        <Typography sx={{ fontSize: 25, py: "30px" }}>
+          WHAT ARE NOODLES?
+        </Typography>
+        <Typography sx={{ p: "" }}>
+          Noodle is a necessary product and used extensively in the existing
+          composite industry in large quantities. 3D Noodles International AB
+          will produce noodles faster and cheaper and help the customer reduce
+          their costs and increase the productivity and quality.
+        </Typography>
+
       </Box>
+      <Box
+        id="image"
+        component="img"
+        src={noodles4.src}
+        sx={{
+          display: "flex",
+          flex: "flex-basis",
+          p: "15px",
+          flexBasis: "auto",
+          maxWidth: "30%",
+        }}
+      />
     </Box>
   );
 }

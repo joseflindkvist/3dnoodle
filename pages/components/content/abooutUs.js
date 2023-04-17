@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { Box, flexbox, width } from "@mui/system";
-import { TextField } from "@mui/material";
+import { TextField, ThemeProvider, Typography } from "@mui/material";
 import dog from "./dog.png";
+import noodles1 from "./noodles1.jpg";
 import { useEffect } from "react";
+import { baseTheme } from "@/styles/styles";
+import { BackToTopButton } from "../BackToTopButton";
 import {
   Instagram,
   LinkedIn,
@@ -12,18 +15,20 @@ import {
   LinkedCameraOutlined,
   Book,
   Height,
+  RoundedCorner,
 } from "@mui/icons-material";
 import Aos from "aos";
 
 export default function AboutUs() {
   useEffect(() => {
-    Aos.init({ duration: "3000" });
+    Aos.init({ duration: "2500"});
   });
   return (
     <Box
-      data-aos="fade-up"
+      id="aboutus"
+      data-aos="fade-down"
       sx={{
-        width: "100%",
+        width: "100vw",
         height: "100vh",
         display: "flex",
         alignItems: "center",
@@ -34,13 +39,13 @@ export default function AboutUs() {
       <Box
         id="image"
         component="img"
-        src={dog.src}
+        src={noodles1.src}
         sx={{
           display: "flex",
           flex: "flex-basis",
           p: "15px",
           flexBasis: "auto",
-          maxWidth: "30%",
+          maxWidth: "25%",
         }}
       ></Box>
       <Box
@@ -52,18 +57,21 @@ export default function AboutUs() {
           justifyContent: "space-between",
           color: "black",
           p: "0px",
+          textAlign: "center",
         }}
       >
-        <Box sx={{ py: "30px" }}>ABOUT US</Box>
-        <Box sx={{ p: "" }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Box>
+
+        <Typography
+          sx={{ fontSize: 25, py: "30px", fontFamily: [""], fontWeight: "" }}
+        >
+          ABOUT US
+        </Typography>
+        <Typography sx={{ p: "" }}>
+          3D Noodles International AB, is a new company specialized in producing
+          triangle-shaped fabric called noodles or fillers. It is a new Spin-off
+          from Biteam AB.
+        </Typography>
+
       </Box>
     </Box>
   );
