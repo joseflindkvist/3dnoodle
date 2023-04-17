@@ -19,7 +19,7 @@ import {
 } from "@mui/icons-material";
 import Aos from "aos";
 
-export function AboutUs() {
+export default function AboutUs() {
   useEffect(() => {
     Aos.init({ duration: "2500"});
   });
@@ -60,6 +60,7 @@ export function AboutUs() {
           textAlign: "center",
         }}
       >
+
         <Typography
           sx={{ fontSize: 25, py: "30px", fontFamily: [""], fontWeight: "" }}
         >
@@ -70,6 +71,7 @@ export function AboutUs() {
           triangle-shaped fabric called noodles or fillers. It is a new Spin-off
           from Biteam AB.
         </Typography>
+
       </Box>
     </Box>
   );

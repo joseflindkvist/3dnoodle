@@ -17,7 +17,7 @@ import {
   Height,
 } from "@mui/icons-material";
 
-export function OurNoodles() {
+export default function OurNoodles() {
   useEffect(() => {
     Aos.init({ duration: "2500" });
   });
@@ -46,6 +46,7 @@ export function OurNoodles() {
           textAlign: "center",
         }}
       >
+
         <Typography sx={{ fontSize: 25, py: "30px" }}>
           WHAT ARE NOODLES?
         </Typography>
@@ -55,6 +56,7 @@ export function OurNoodles() {
           will produce noodles faster and cheaper and help the customer reduce
           their costs and increase the productivity and quality.
         </Typography>
+
       </Box>
       <Box
         id="image"
