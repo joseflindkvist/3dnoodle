@@ -7,6 +7,7 @@ import { TextField, Typography } from "@mui/material";
 import dog from "./dog.png";
 import noodles3 from "./noodles3.jpg";
 import noodles4 from "./noodles4.jpg";
+
 import {
   Instagram,
   LinkedIn,
@@ -46,8 +47,7 @@ export default function OurNoodles() {
           textAlign: "center",
         }}
       >
-
-        <Typography sx={{ fontSize: 25, py: "30px" }}>
+        <Typography sx={{ fontSize: 25, py: "30px", fontWeight: "650" }}>
           WHAT ARE NOODLES?
         </Typography>
         <Typography sx={{ p: "" }}>
@@ -56,7 +56,6 @@ export default function OurNoodles() {
           will produce noodles faster and cheaper and help the customer reduce
           their costs and increase the productivity and quality.
         </Typography>
-
       </Box>
       <Box
         id="image"

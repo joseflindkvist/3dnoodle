@@ -16,6 +16,12 @@ import { UnderConstruction } from "./components/content/underConstruction";
 import ContentContainer from "./components/content/contentcontainer";
 import BackToTopButton from "./components/BackToTopButton";
 import BottomBar from "./components/bottombar/bottombar";
+import { createTheme, ThemeProvider } from "@mui/material";
+const theme = createTheme({
+  typography: {
+    fontFamily: ["Lora", "serif"].join(","),
+  },
+});
 
 const MaintenancePage = () => {
   return (
@@ -27,7 +33,7 @@ const MaintenancePage = () => {
       }}
     >
       <NavigationBar />
-      <ContentContainer />
+      <ContentContainer theme={theme} />
       <BottomBar />
     </Box>
   );

@@ -10,8 +10,7 @@ import ContactForm from "./contactForm";
 import WhyNoodles from "./whyNoodles";
 import ContactInfo from "./contactInfo";
 
-export default function ContentContainer() {
-
+export default function ContentContainer(theme) {
   return (
     <Box
       sx={{
@@ -20,12 +19,10 @@ export default function ContentContainer() {
         flexDirection: "column",
       }}
     >
-
-      <AboutUs />
+      <AboutUs theme={theme} />
       <OurNoodles />
       <WhyNoodles />
       <ContactInfo />
-
     </Box>
   );
 }
