@@ -7,6 +7,8 @@ import noodles1 from "./noodles1.jpg";
 import { useEffect } from "react";
 import { baseTheme } from "@/styles/styles";
 import { BackToTopButton } from "../BackToTopButton";
+import { Lora } from "next/font/google";
+
 import {
   Instagram,
   LinkedIn,
@@ -19,9 +21,9 @@ import {
 } from "@mui/icons-material";
 import Aos from "aos";
 
-export default function AboutUs() {
+export default function AboutUs(theme) {
   useEffect(() => {
-    Aos.init({ duration: "2500"});
+    Aos.init({ duration: "2500" });
   });
   return (
     <Box
@@ -60,18 +62,23 @@ export default function AboutUs() {
           textAlign: "center",
         }}
       >
-
-        <Typography
-          sx={{ fontSize: 25, py: "30px", fontFamily: [""], fontWeight: "" }}
-        >
-          ABOUT US
-        </Typography>
+        <Box theme={theme}>
+          <Typography
+            sx={{
+              fontSize: 25,
+              py: "30px",
+              // fontFamily: "Lora",
+              fontWeight: "600",
+            }}
+          >
+            ABOUT US 
+          </Typography>
+        </Box>
         <Typography sx={{ p: "" }}>
           3D Noodles International AB, is a new company specialized in producing
           triangle-shaped fabric called noodles or fillers. It is a new Spin-off
           from Biteam AB.
         </Typography>
-
       </Box>
     </Box>
   );

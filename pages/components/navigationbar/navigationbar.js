@@ -28,7 +28,7 @@ export default function NavigationBar() {
         elevation="0"
         sx={{
           background:
-            "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0))",
+            "linear-gradient(to bottom,rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1),rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))",
         }}
       >
         <Toolbar>
@@ -37,7 +37,8 @@ export default function NavigationBar() {
             sx={{
               display: "flex",
               color: "black",
-              // height: "15vh", kanske ej behövs
+              // flexFlow: "column wrap",
+              flexWrap: "wrap",
               width: "100vw",
               alignItems: "center",
               justifyContent: "space-between",
@@ -47,7 +48,7 @@ export default function NavigationBar() {
               component="img"
               src={logo1.src}
               sx={{
-                maxHeight: "140px",
+                maxHeight: "120px",
                 display: "flex",
                 flex: "flex-basis",
                 p: "15px",
@@ -61,13 +62,16 @@ export default function NavigationBar() {
                 justifyContent: "space-between",
                 display: "flex",
                 flexDirection: "row",
+
+                fontFamily: "myFirstFont",
+                // src: FontsFree - Net - Armin - Grotesk2.ttf,
               }}
             >
               <Button
                 onClick={() => {
                   scrollElement("aboutus");
                 }}
-                sx={{ p: "40px", color: "black" }}
+                sx={{ p: "40px", color: "black", fontWeight: "650" }}
               >
                 about us
               </Button>
@@ -75,15 +79,23 @@ export default function NavigationBar() {
                 onClick={() => {
                   scrollElement("noodles");
                 }}
-                sx={{ p: "40px", color: "black" }}
+                sx={{ p: "40px", color: "black", fontWeight: "650" }}
               >
                 noodles
               </Button>
               <Button
                 onClick={() => {
+                  scrollElement("whynoodles");
+                }}
+                sx={{ p: "40px", color: "black", fontWeight: "650" }}
+              >
+                advantages
+              </Button>
+              <Button
+                onClick={() => {
                   scrollElement("contact");
                 }}
-                sx={{ p: "40px", color: "black" }}
+                sx={{ p: "40px", color: "black", fontWeight: "650" }}
               >
                 contact
               </Button>

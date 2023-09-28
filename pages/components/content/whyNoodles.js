@@ -27,8 +27,9 @@ export default function WhyNoodles() {
   });
   return (
     <Box
-      id="aboutus"
+      id="whynoodles"
       data-aos="fade"
+      data-aos-anchor-placement="top-center"
       sx={{
         width: "100vw",
         height: "100vh",
@@ -55,7 +56,7 @@ export default function WhyNoodles() {
             fontSize: 25,
             py: "30px",
             fontFamily: [""],
-            fontWeight: "",
+            fontWeight: "650",
           }}
         >
           {/* WHY NOODLES? */}
@@ -78,10 +79,12 @@ export default function WhyNoodles() {
           <Typography x sx={{ fontWeight: "cursive" }}></Typography>
           <Typography>
             <CheckIcon color="primary" />
+            {"    "}
             Provide directly the concave sides of required radius
           </Typography>
           <Typography>
             <CheckIcon color="primary" />
+            {"    "}
             Speed up composite production, no investments needed Low production
             cost, save labour and inventory
           </Typography>
@@ -92,13 +95,15 @@ export default function WhyNoodles() {
             properties
           </Typography>
           <Typography>
-            {" "}
+            {"    "}
             <CheckIcon color="primary" />
+            {"    "}
             Enable consistent quality Improve mechanical performance
           </Typography>
           <Typography>
-            {" "}
+  
             <CheckIcon color="primary" />
+            {"    "}
             Provide customized solutions Allow scaling-up the process The
             noodles can be produced in different shapes and sizes with different
             fibers and tailored to solution
