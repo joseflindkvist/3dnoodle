@@ -6,7 +6,7 @@ import dog from "./dog.png";
 import noodles1 from "./noodles1.jpg";
 import { useEffect } from "react";
 import { baseTheme } from "@/styles/styles";
-import { BackToTopButton } from "../BackToTopButton";
+import { BackToTopButton } from "../../components/BackToTopButton";
 import {
   Instagram,
   LinkedIn,
@@ -39,7 +39,7 @@ export default function ContactInfo() {
       <Box
         id="text"
         sx={{
-          maxWidth: "50%",
+          maxWidth: "70%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -73,8 +73,8 @@ export default function ContactInfo() {
             display: "flex",
             flexDirection: "row",
 
-            // justifyContent: "space-between",
-            gap: "0px 101px",
+            justifyContent: "space-between",
+            gap: "0px 100px",
           }}
         >
           <Typography sx={{ fontFamily: [""], fontWeight: "" }}>
@@ -87,14 +87,18 @@ export default function ContactInfo() {
           sx={{
             display: "flex",
             flexDirection: "row",
+            justifyContent: "space-between",
             // justifyContent: "space-evenly",
-            gap: "0px 50px",
+            gap: "0px 100px",
           }}
         >
           <Typography>Postal address:</Typography>
           <Typography>Box 209 11479 Stockholm Sweden</Typography>
         </Box>
-        <Typography sx={{ display: "flex", justifyContent: "left" }}>
+
+        <Typography
+          sx={{ py: "10px", display: "flex", justifyContent: "center",  }}
+        >
           Fredrik Winberg and Nandan Khokar
         </Typography>
       </Box>

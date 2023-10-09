@@ -1,19 +1,15 @@
 import { createTheme } from "@mui/material";
 
-export  const baseTheme = createTheme({
+export const themeMain = createTheme({
   palette: {
     primary: {
-      main: "#23A6E5",
+      main: "#000000",
     },
     secondary: {
-      main: "#335566",
+      main: "#00ff00",
     },
   },
   typography: {
-    
-    fontFamily: ["Chilanka", "Monsterrat"].join(","),
-  },
-  shape: {
-    borderRadius: 4,
+    fontFamily: "'Dosis Medium', sans-serif",
   },
 });

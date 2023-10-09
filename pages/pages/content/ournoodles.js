@@ -33,6 +33,7 @@ export default function OurNoodles() {
         alignItems: "center",
         justifyContent: "space-evenly",
         flexDirection: "reverse-row",
+        "@media (max-width: 768px)": {  flexDirection: "column",}
       }}
     >
       <Box
@@ -45,6 +46,8 @@ export default function OurNoodles() {
           color: "black",
           p: "0px",
           textAlign: "center",
+          "@media (max-width: 768px)": {      maxWidth: "70%",}
+         
         }}
       >
         <Typography sx={{ fontSize: 25, py: "30px", fontWeight: "650" }}>
@@ -67,6 +70,12 @@ export default function OurNoodles() {
           p: "15px",
           flexBasis: "auto",
           maxWidth: "30%",
+          "@media (max-width: 768px)": {
+            p: "0px",
+            order: 2,
+            maxWidth: "70%",
+            flexDirection: "column",
+          },
         }}
       />
     </Box>

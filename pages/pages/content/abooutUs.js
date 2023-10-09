@@ -6,8 +6,9 @@ import dog from "./dog.png";
 import noodles1 from "./noodles1.jpg";
 import { useEffect } from "react";
 import { baseTheme } from "@/styles/styles";
-import { BackToTopButton } from "../BackToTopButton";
+import { BackToTopButton } from "../../components/BackToTopButton";
 import { Lora } from "next/font/google";
+import { useTheme } from "@mui/material";
 
 import {
   Instagram,
@@ -22,6 +23,7 @@ import {
 import Aos from "aos";
 
 export default function AboutUs(theme) {
+  const themeInstance = useTheme();
   useEffect(() => {
     Aos.init({ duration: "2500" });
   });
@@ -36,6 +38,11 @@ export default function AboutUs(theme) {
         alignItems: "center",
         justifyContent: "space-evenly",
         flexDirection: "row",
+        flexWrap: "wrap",
+        "@media (max-width: 768px)": {
+
+          flexDirection: "column",
+        },
       }}
     >
       <Box
@@ -48,33 +55,42 @@ export default function AboutUs(theme) {
           p: "15px",
           flexBasis: "auto",
           maxWidth: "25%",
+          "@media (max-width: 768px)": {
+            p: "0px",
+            order:2,
+            maxWidth: "70%",
+            flexDirection: "column",
+          },
+         
         }}
       ></Box>
       <Box
         id="text"
         sx={{
-          maxWidth: "40%",
+          fontFamily: themeInstance.typography.fontFamily,
+          maxWidth: "70%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
           color: "black",
           p: "0px",
           textAlign: "center",
+          flexWrap: "wrap",
         }}
       >
-        <Box theme={theme}>
+        <Box>
           <Typography
             sx={{
               fontSize: 25,
               py: "30px",
-              // fontFamily: "Lora",
+
               fontWeight: "600",
             }}
           >
-            ABOUT US 
+            ABOUT US
           </Typography>
         </Box>
-        <Typography sx={{ p: "" }}>
+        <Typography sx={{ fontFamily: themeInstance.typography.fontFamily }}>
           3D Noodles International AB, is a new company specialized in producing
           triangle-shaped fabric called noodles or fillers. It is a new Spin-off
           from Biteam AB.
