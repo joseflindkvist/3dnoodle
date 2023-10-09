@@ -6,7 +6,7 @@ import dog from "./dog.png";
 import noodles3 from "./noodles3.jpg";
 import { useEffect } from "react";
 import { baseTheme } from "@/styles/styles";
-import { BackToTopButton } from "../BackToTopButton";
+import { BackToTopButton } from "../../components/BackToTopButton";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import CheckIcon from "@mui/icons-material/Check";
 import {
@@ -42,7 +42,7 @@ export default function WhyNoodles() {
       <Box
         id="text"
         sx={{
-          maxWidth: "40%",
+          maxWidth: "70%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -101,7 +101,6 @@ export default function WhyNoodles() {
             Enable consistent quality Improve mechanical performance
           </Typography>
           <Typography>
-  
             <CheckIcon color="primary" />
             {"    "}
             Provide customized solutions Allow scaling-up the process The

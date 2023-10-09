@@ -1,9 +1,10 @@
 import "@/styles/globals.css";
-
-import { Lora } from 'next/font/google'
-
-
+import { ThemeProvider } from "@mui/material";
+import { themeMain } from "@/styles/styles";
 export default function App({ Component, pageProps }) {
-  
-  return <Component {...pageProps} />;
+  return (
+    <ThemeProvider theme={themeMain}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }

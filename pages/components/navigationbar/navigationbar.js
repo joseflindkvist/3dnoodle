@@ -3,15 +3,13 @@ import { Box } from "@mui/system";
 import { useState } from "react";
 import logo1 from "./logo1.png";
 import { FitScreen } from "@mui/icons-material";
-import { Button, duration } from "@mui/material";
 import Typography from "@mui/material";
-import { AppBar, Toolbar } from "@mui/material";
+import { AppBar, Toolbar, useTheme, Button } from "@mui/material";
 import NaviagtionButton from "../navigationButton";
-import { ContentContainer } from "../content/contentcontainer";
-import { AboutUs } from "../content/abooutUs";
-import { OurNoodles } from "../content/ournoodles";
+import {} from "@mui/material";
 
 export default function NavigationBar() {
+  const themeInstance = useTheme();
   function scrollElement(id) {
     console.log(id);
     var element = document.getElementById(id);
@@ -26,6 +24,7 @@ export default function NavigationBar() {
       <AppBar
         position="fixed"
         elevation="0"
+        fontFamily={themeInstance.typography}
         sx={{
           background:
             "linear-gradient(to bottom,rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1),rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))",
@@ -41,7 +40,7 @@ export default function NavigationBar() {
               flexWrap: "wrap",
               width: "100vw",
               alignItems: "center",
-              justifyContent: "space-between",
+              justifyContent: "space-evenly",
             }}
           >
             <Box
@@ -53,25 +52,39 @@ export default function NavigationBar() {
                 flex: "flex-basis",
                 p: "15px",
                 flexBasis: "auto",
+                "@media (max-width: 768px)": {
+                  p: "5px",
+                  maxHeight: "80px",
+                },
               }}
             ></Box>
             <Box
               id="nav_buttons"
               sx={{
-                p: "10px",
-                justifyContent: "space-between",
+                p: "0px",
+                justifyContent: "space-evenly",
                 display: "flex",
                 flexDirection: "row",
-
-                fontFamily: "myFirstFont",
-                // src: FontsFree - Net - Armin - Grotesk2.ttf,
+                flexWrap: "wrap",
+                fontFamily: themeInstance.typography.fontFamily,
               }}
             >
               <Button
+                fontFamily={themeInstance.typography.fontFamily}
                 onClick={() => {
                   scrollElement("aboutus");
+                  console.log(themeInstance.typography.fontFamily);
                 }}
-                sx={{ p: "40px", color: "black", fontWeight: "650" }}
+                sx={{
+                  fontFamily: themeInstance.typography.fontFamily,
+                  p: "10px",
+                  color: "black",
+
+                  fontSize: "2vw",
+                  "@media (max-width: 768px)": {
+                    fontSize: "3vw", // Adjust font size for smaller screens
+                  },
+                }}
               >
                 about us
               </Button>
@@ -79,7 +92,14 @@ export default function NavigationBar() {
                 onClick={() => {
                   scrollElement("noodles");
                 }}
-                sx={{ p: "40px", color: "black", fontWeight: "650" }}
+                sx={{
+                  p: "10px",
+                  color: "black",
+                  fontSize: "2vw",
+                  "@media (max-width: 768px)": {
+                    fontSize: "3vw", // Adjust font size for smaller screens
+                  },
+                }}
               >
                 noodles
               </Button>
@@ -87,7 +107,14 @@ export default function NavigationBar() {
                 onClick={() => {
                   scrollElement("whynoodles");
                 }}
-                sx={{ p: "40px", color: "black", fontWeight: "650" }}
+                sx={{
+                  p: "10px",
+                  color: "black",
+                  fontSize: "2vw",
+                  "@media (max-width: 768px)": {
+                    fontSize: "3vw", // Adjust font size for smaller screens
+                  },
+                }}
               >
                 advantages
               </Button>
@@ -95,7 +122,14 @@ export default function NavigationBar() {
                 onClick={() => {
                   scrollElement("contact");
                 }}
-                sx={{ p: "40px", color: "black", fontWeight: "650" }}
+                sx={{
+                  p: "0px",
+                  color: "black",
+                  fontSize: "2vw",
+                  "@media (max-width: 768px)": {
+                    fontSize: "3vw", // Adjust font size for smaller screens
+                  },
+                }}
               >
                 contact
               </Button>

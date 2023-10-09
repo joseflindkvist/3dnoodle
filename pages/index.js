@@ -12,16 +12,12 @@ import {
 } from "@mui/icons-material";
 
 import NavigationBar from "./components/navigationbar/navigationbar";
-import { UnderConstruction } from "./components/content/underConstruction";
-import ContentContainer from "./components/content/contentcontainer";
+import { UnderConstruction } from "./pages/content/underConstruction";
+import ContentContainer from "./pages/content/contentcontainer";
 import BackToTopButton from "./components/BackToTopButton";
 import BottomBar from "./components/bottombar/bottombar";
 import { createTheme, ThemeProvider } from "@mui/material";
-const theme = createTheme({
-  typography: {
-    fontFamily: ["Lora", "serif"].join(","),
-  },
-});
+import { themeMain } from "../styles/styles";
 
 const MaintenancePage = () => {
   return (
@@ -33,7 +29,7 @@ const MaintenancePage = () => {
       }}
     >
       <NavigationBar />
-      <ContentContainer theme={theme} />
+      <ContentContainer />
       <BottomBar />
     </Box>
   );
