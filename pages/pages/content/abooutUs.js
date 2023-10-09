@@ -40,7 +40,6 @@ export default function AboutUs(theme) {
         flexDirection: "row",
         flexWrap: "wrap",
         "@media (max-width: 768px)": {
-
           flexDirection: "column",
         },
       }}
@@ -57,18 +56,17 @@ export default function AboutUs(theme) {
           maxWidth: "25%",
           "@media (max-width: 768px)": {
             p: "0px",
-            order:2,
-            maxWidth: "70%",
+            order: 2,
+            maxWidth: "50%",
             flexDirection: "column",
           },
-         
         }}
       ></Box>
       <Box
         id="text"
         sx={{
           fontFamily: themeInstance.typography.fontFamily,
-          maxWidth: "70%",
+          maxWidth: "40%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -76,6 +74,9 @@ export default function AboutUs(theme) {
           p: "0px",
           textAlign: "center",
           flexWrap: "wrap",
+          "@media (max-width: 768px)": {
+            maxWidth: "70%",
+          },
         }}
       >
         <Box>
@@ -85,6 +86,9 @@ export default function AboutUs(theme) {
               py: "30px",
 
               fontWeight: "600",
+              "@media (max-width: 768px)": {
+                py: "20px",
+              },
             }}
           >
             ABOUT US
