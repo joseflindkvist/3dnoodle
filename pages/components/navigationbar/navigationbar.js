@@ -77,12 +77,13 @@ export default function NavigationBar() {
                 }}
                 sx={{
                   fontFamily: themeInstance.typography.fontFamily,
-                  p: "10px",
+                  p: "30px",
                   color: "black",
 
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   "@media (max-width: 768px)": {
                     fontSize: "3vw", // Adjust font size for smaller screens
+                    p: "10px",
                   },
                 }}
               >
@@ -93,11 +94,12 @@ export default function NavigationBar() {
                   scrollElement("noodles");
                 }}
                 sx={{
-                  p: "10px",
+                  p: "30px",
                   color: "black",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   "@media (max-width: 768px)": {
                     fontSize: "3vw", // Adjust font size for smaller screens
+                    p: "10px",
                   },
                 }}
               >
@@ -108,11 +110,12 @@ export default function NavigationBar() {
                   scrollElement("whynoodles");
                 }}
                 sx={{
-                  p: "10px",
+                  p: "30px",
                   color: "black",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   "@media (max-width: 768px)": {
                     fontSize: "3vw", // Adjust font size for smaller screens
+                    p: "10px",
                   },
                 }}
               >
@@ -123,11 +126,12 @@ export default function NavigationBar() {
                   scrollElement("contact");
                 }}
                 sx={{
-                  p: "0px",
+                  p: "30px",
                   color: "black",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   "@media (max-width: 768px)": {
                     fontSize: "3vw", // Adjust font size for smaller screens
+                    p: "10px",
                   },
                 }}
               >
