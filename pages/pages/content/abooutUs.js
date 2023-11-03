@@ -33,10 +33,10 @@ export default function AboutUs(theme) {
       data-aos="fade-down"
       sx={{
         width: "100vw",
-        height: "100vh",
+        height: "90vh",
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-evenly",
+        justifyContent: "center",
         flexDirection: "row",
         flexWrap: "wrap",
         "@media (max-width: 768px)": {
@@ -65,14 +65,14 @@ export default function AboutUs(theme) {
       <Box
         id="text"
         sx={{
-          fontFamily: themeInstance.typography.fontFamily,
-          maxWidth: "40%",
+          fontFamily: "Dosis Medium",
+          maxWidth: "30%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
           color: "black",
           p: "0px",
-          textAlign: "center",
+          textAlign: "right",
           flexWrap: "wrap",
           "@media (max-width: 768px)": {
             maxWidth: "70%",
@@ -91,7 +91,7 @@ export default function AboutUs(theme) {
               },
             }}
           >
-            ABOUT US
+            about us
           </Typography>
         </Box>
         <Typography sx={{ fontFamily: themeInstance.typography.fontFamily }}>
