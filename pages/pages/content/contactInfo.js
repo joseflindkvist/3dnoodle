@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Box, flexbox, width } from "@mui/system";
-import { TextField, ThemeProvider, Typography } from "@mui/material";
+import { TextField, Typography } from "@mui/material";
 import dog from "./dog.png";
 import noodles1 from "./noodles1.jpg";
 import { useEffect } from "react";
@@ -29,9 +29,9 @@ export default function ContactInfo() {
       data-aos="fade"
       sx={{
         width: "100vw",
-        height: "100vh",
+        height: "60vh",
         display: "flex",
-        alignItems: "center",
+        alignItems: "start",
         justifyContent: "space-evenly",
         flexDirection: "row",
       }}
@@ -53,13 +53,13 @@ export default function ContactInfo() {
         <Typography
           sx={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "start",
             fontSize: 25,
             gap: "10px",
             py: "30px",
           }}
         >
-          Send us an email{" "}
+          send us an email{" "}
           <a href="mailto:info@3dnoodle.com">
             <EmailOutlined
               fontSize="large"
@@ -71,14 +71,14 @@ export default function ContactInfo() {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: "column",
 
-            justifyContent: "space-between",
-            gap: "0px 100px",
+            justifyContent: "start",
+            // gap: "0px 100px",
           }}
         >
-          <Typography sx={{ fontFamily: [""], fontWeight: "" }}>
-            Contact:
+          <Typography sx={{ fontFamily: [""], fontWeight: "700" }}>
+            contact:
           </Typography>
           <Typography>info@3dnoodle.com</Typography>
         </Box>
@@ -86,18 +86,27 @@ export default function ContactInfo() {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
+            flexDirection: "column",
+            // alignContent: "start",
+            width: "100%",
+            py: "10px",
+
             // justifyContent: "space-evenly",
-            gap: "0px 100px",
+            // gap: "0px 100px",
           }}
         >
-          <Typography>Postal address:</Typography>
+          <Typography sx={{ fontWeight: "700" }}>postal address:</Typography>
+
           <Typography>Box 209 11479 Stockholm Sweden</Typography>
         </Box>
 
         <Typography
-          sx={{ py: "10px", display: "flex", justifyContent: "center",  }}
+          sx={{
+            py: "5px",
+            display: "flex",
+            justifyContent: "center",
+            fontStyle: "italic ",
+          }}
         >
           Fredrik Winberg and Nandan Khokar
         </Typography>

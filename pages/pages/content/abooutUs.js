@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Box, flexbox, width } from "@mui/system";
-import { TextField, ThemeProvider, Typography } from "@mui/material";
+import { TextField, Typography } from "@mui/material";
 import dog from "./dog.png";
 import noodles1 from "./noodles1.jpg";
 import { useEffect } from "react";
@@ -33,10 +33,10 @@ export default function AboutUs(theme) {
       data-aos="fade-down"
       sx={{
         width: "100vw",
-        height: "100vh",
+        height: "90vh",
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-evenly",
+        justifyContent: "center",
         flexDirection: "row",
         flexWrap: "wrap",
         "@media (max-width: 768px)": {
@@ -59,20 +59,21 @@ export default function AboutUs(theme) {
             order: 2,
             maxWidth: "50%",
             flexDirection: "column",
+            marginTop: "15px",
           },
         }}
       ></Box>
       <Box
         id="text"
         sx={{
-          fontFamily: themeInstance.typography.fontFamily,
-          maxWidth: "40%",
+          fontFamily: "Dosis Medium",
+          maxWidth: "30%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
           color: "black",
           p: "0px",
-          textAlign: "center",
+          textAlign: "right",
           flexWrap: "wrap",
           "@media (max-width: 768px)": {
             maxWidth: "70%",
@@ -91,7 +92,7 @@ export default function AboutUs(theme) {
               },
             }}
           >
-            ABOUT US
+            about us
           </Typography>
         </Box>
         <Typography sx={{ fontFamily: themeInstance.typography.fontFamily }}>

@@ -31,33 +31,32 @@ export default function OurNoodles() {
         height: "100vh",
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-evenly",
+        justifyContent: "center",
         flexDirection: "reverse-row",
-        "@media (max-width: 768px)": {  flexDirection: "column",}
+        "@media (max-width: 768px)": { flexDirection: "column" },
       }}
     >
       <Box
         id="text"
         sx={{
-          maxWidth: "40%",
+          maxWidth: "30%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
           color: "black",
           p: "0px",
-          textAlign: "center",
-          "@media (max-width: 768px)": {      maxWidth: "70%",}
-         
+          textAlign: "left",
+          "@media (max-width: 768px)": { maxWidth: "70%" },
         }}
       >
         <Typography sx={{ fontSize: 25, py: "30px", fontWeight: "650" }}>
-          WHAT ARE NOODLES?
+          what is a Noodle?
         </Typography>
         <Typography sx={{ p: "" }}>
-          Noodle is a necessary product and used extensively in the existing
-          composite industry in large quantities. 3D Noodles International AB
-          will produce noodles faster and cheaper and help the customer reduce
-          their costs and increase the productivity and quality.
+          A Noodle is a indispensable product used in large quantities by the
+          composite industry. 3D Noodles International AB produces noodles
+          faster, cheaper and with consistent properties whereby helping the
+          customer reduce their cost and increase the productivity and quality.
         </Typography>
       </Box>
       <Box

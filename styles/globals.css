@@ -41,7 +41,11 @@
 }
 @font-face {
   font-family: "Dosis Medium"; /* Name you'll use to reference the font */
-  src: url("/fonts/Dosis-Medium.tff") format("opentype"); /* Path to the font file */
+  src: url("../public/fonts/Dosis-Medium.ttf") format("opentype"); /* Path to the font file */
+}
+@font-face {
+  font-family: "Poppins"; /* Name you'll use to reference the font */
+  src: url("../public/fonts/Poppins-Regular.ttf") format("opentype"); /* Path to the font file */
 }
 
 @media (prefers-color-scheme: dark) {

@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/system";
 import { useState } from "react";
 import logo1 from "./logo1.png";
+import logoLarge from "./logoLarge.png";
 import { FitScreen } from "@mui/icons-material";
 import Typography from "@mui/material";
 import { AppBar, Toolbar, useTheme, Button } from "@mui/material";
@@ -45,7 +46,7 @@ export default function NavigationBar() {
           >
             <Box
               component="img"
-              src={logo1.src}
+              src={logoLarge.src}
               sx={{
                 maxHeight: "120px",
                 display: "flex",
@@ -80,7 +81,7 @@ export default function NavigationBar() {
                   p: "30px",
                   color: "black",
 
-                  fontSize: "1.5vw",
+                  fontSize: "1.2em",
                   "@media (max-width: 768px)": {
                     fontSize: "3vw", // Adjust font size for smaller screens
                     p: "10px",
@@ -96,7 +97,7 @@ export default function NavigationBar() {
                 sx={{
                   p: "30px",
                   color: "black",
-                  fontSize: "1.5vw",
+                  fontSize: "1.2em",
                   "@media (max-width: 768px)": {
                     fontSize: "3vw", // Adjust font size for smaller screens
                     p: "10px",
@@ -106,16 +107,19 @@ export default function NavigationBar() {
                 noodles
               </Button>
               <Button
+                // variant="contained"
+                //textTransform="lowercase"
                 onClick={() => {
                   scrollElement("whynoodles");
                 }}
                 sx={{
                   p: "30px",
                   color: "black",
-                  fontSize: "1.5vw",
+                  fontSize: "1.2em",
                   "@media (max-width: 768px)": {
                     fontSize: "3vw", // Adjust font size for smaller screens
                     p: "10px",
+                    texttransform: "lowercase",
                   },
                 }}
               >
@@ -127,8 +131,8 @@ export default function NavigationBar() {
                 }}
                 sx={{
                   p: "30px",
-                  color: "black",
-                  fontSize: "1.5vw",
+                  //color: "black",
+                  fontSize: "1.2em",
                   "@media (max-width: 768px)": {
                     fontSize: "3vw", // Adjust font size for smaller screens
                     p: "10px",

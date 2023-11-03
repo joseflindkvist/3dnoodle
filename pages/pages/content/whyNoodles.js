@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Box, flexbox, width } from "@mui/system";
-import { TextField, ThemeProvider, Typography } from "@mui/material";
+import { TextField, Typography } from "@mui/material";
 import dog from "./dog.png";
 import noodles3 from "./noodles3.jpg";
 import { useEffect } from "react";
-import { baseTheme } from "@/styles/styles";
+import { baseTheme, themeMain } from "@/styles/styles";
 import { BackToTopButton } from "../../components/BackToTopButton";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import CheckIcon from "@mui/icons-material/Check";
@@ -29,15 +29,28 @@ export default function WhyNoodles() {
     <Box>
       <Box
         id="whynoodles"
+        sx={{
+          width: "100vw",
+          height: "20vh",
+          "@media (max-width: 768px)": {
+            height: "15vh",
+          },
+        }}
+      />
+      <Box
         data-aos="fade"
         data-aos-anchor-placement="top-center"
         sx={{
           width: "100vw",
-          height: "100vh",
+          height: "80vh",
+
           display: "flex",
           alignContent: "center",
           justifyContent: "space-evenly",
           flexDirection: "row",
+          "@media (max-width: 768px)": {
+            height: "120vh",
+          },
         }}
       >
         <Box
@@ -77,40 +90,139 @@ export default function WhyNoodles() {
               flexDirection: "column",
               gap: "10px 30px",
               fontSize: "30",
-              justifyContent: "space-between",
+              justifyContent: "center",
             }}
           >
             <Typography x sx={{ fontWeight: "cursive" }}></Typography>
-            <Typography>
-              <CheckIcon color="primary" />
-              {"    "}
-              Provide directly the concave sides of required radius
-            </Typography>
-            <Typography>
-              <CheckIcon color="primary" />
-              {"    "}
-              Speed up composite production, no investments needed Low
-              production cost, save labour and inventory
-            </Typography>
-            <Typography>
-              <CheckIcon color="primary" />
-              {"    "}
-              Generate virtually no waste Repeatable defined shape for
-              consistent properties
-            </Typography>
-            <Typography>
-              {"    "}
-              <CheckIcon color="primary" />
-              {"    "}
-              Enable consistent quality Improve mechanical performance
-            </Typography>
-            <Typography>
-              <CheckIcon color="primary" />
-              {"    "}
-              Provide customized solutions Allow scaling-up the process The
-              noodles can be produced in different shapes and sizes with
-              different fibers and tailored to solution
-            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+
+                justifyContent: "space-between",
+              }}
+            >
+              <Box>
+                <CheckIcon
+                  color="primary"
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginRight: "10px",
+                    color: "green",
+                  }}
+                />
+              </Box>
+              <Box>
+                <Typography>
+                  {"    "}
+                  Provide directly the concave sides of required radius
+                </Typography>
+              </Box>
+            </Box>
+
+            <Box
+              sx={{
+                display: "flex",
+
+                justifyContent: "space-between",
+              }}
+            >
+              <Box>
+                <CheckIcon
+                  color="primary"
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginRight: "10px",
+                    color: "green",
+                  }}
+                />
+              </Box>
+              <Box>
+                <Typography>
+                  {"    "}
+                  Speed up composite production, no investments needed low
+                  production cost, save labour and inventory
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+
+                justifyContent: "space-between",
+              }}
+            >
+              <Box>
+                <CheckIcon
+                  color="primary"
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginRight: "10px",
+                    color: "green",
+                  }}
+                />
+              </Box>
+              <Box>
+                <Typography>
+                  {"    "}
+                  Generate virtually no waste Repeatable defined shape for
+                  consistent properties
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+
+                justifyContent: "space-between",
+              }}
+            >
+              <Box>
+                <CheckIcon
+                  color="primary"
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginRight: "10px",
+                    color: "green",
+                  }}
+                />
+              </Box>
+              <Box>
+                <Typography>
+                  {"    "}
+                  Enable consistent quality Improve mechanical performance
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+
+                justifyContent: "space-between",
+              }}
+            >
+              <Box>
+                <CheckIcon
+                  sx={{
+                    color: "green",
+                    display: "flex",
+                    alignItems: "center",
+                    marginRight: "10px",
+                  }}
+                />
+              </Box>
+              <Box>
+                <Typography>
+                  {"    "}
+                  Provide customized solutions Allow scaling-up the process The
+                  noodles can be produced in different shapes and sizes with
+                  different fibers and tailored to solution
+                </Typography>
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Box>

@@ -16,6 +16,8 @@ import { UnderConstruction } from "./pages/content/underConstruction";
 import ContentContainer from "./pages/content/contentcontainer";
 import BackToTopButton from "./components/BackToTopButton";
 import BottomBar from "./components/bottombar/bottombar";
+//import ThemeProvider from "styled-components";
+import BottomMenu from "./pages/content/bottomMenu";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { themeMain } from "../styles/styles";
 
@@ -28,9 +30,12 @@ const MaintenancePage = () => {
         backgroundColor: "white",
       }}
     >
-      <NavigationBar />
-      <ContentContainer />
-      <BottomBar />
+      <ThemeProvider theme={themeMain}>
+        <NavigationBar />
+        <ContentContainer />
+        <BottomBar />
+        {/* <BottomMenu /> */}
+      </ThemeProvider>
     </Box>
   );
 };
