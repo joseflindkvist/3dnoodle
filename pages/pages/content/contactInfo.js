@@ -29,7 +29,7 @@ export default function ContactInfo() {
       data-aos="fade"
       sx={{
         width: "100vw",
-        height: "60vh",
+        height: "75vh",
         display: "flex",
         alignItems: "start",
         justifyContent: "space-evenly",
