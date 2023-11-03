@@ -42,11 +42,15 @@ export default function WhyNoodles() {
         data-aos-anchor-placement="top-center"
         sx={{
           width: "100vw",
-          height: "90vh",
+          height: "80vh",
+
           display: "flex",
           alignContent: "center",
           justifyContent: "space-evenly",
           flexDirection: "row",
+          "@media (max-width: 768px)": {
+            height: "120vh",
+          },
         }}
       >
         <Box

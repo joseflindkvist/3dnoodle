@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Box, flexbox, width } from "@mui/system";
-import { TextField, ThemeProvider, Typography } from "@mui/material";
+import { TextField, Typography } from "@mui/material";
 import dog from "./dog.png";
 import noodles1 from "./noodles1.jpg";
 import { useEffect } from "react";
@@ -59,6 +59,7 @@ export default function AboutUs(theme) {
             order: 2,
             maxWidth: "50%",
             flexDirection: "column",
+            marginTop: "15px",
           },
         }}
       ></Box>

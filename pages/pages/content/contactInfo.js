@@ -53,7 +53,7 @@ export default function ContactInfo() {
         <Typography
           sx={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "start",
             fontSize: 25,
             gap: "10px",
             py: "30px",
