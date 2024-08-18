@@ -20,6 +20,7 @@ import BottomBar from "./components/bottombar/bottombar";
 import BottomMenu from "./pages/content/bottomMenu";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { themeMain } from "../styles/styles";
+import NewsPage from "./pages/content/newsPage";
 
 const MaintenancePage = () => {
   return (
@@ -31,6 +32,7 @@ const MaintenancePage = () => {
       }}
     >
       <ThemeProvider theme={themeMain}>
+        <NewsPage />
         <NavigationBar />
         <ContentContainer />
         <BottomBar />
