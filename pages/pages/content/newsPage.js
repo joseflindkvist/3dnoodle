@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import { Box, Typography } from "@mui/material";
-import massa1 from "./massa1.png"; // Import the image
+import massa1 from "./massa1.PNG"; // Import the image
 
 export default function NewsPage() {
   useEffect(() => {
