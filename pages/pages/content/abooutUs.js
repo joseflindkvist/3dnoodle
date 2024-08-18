@@ -1,25 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 import { Box, flexbox, width } from "@mui/system";
 import { TextField, Typography } from "@mui/material";
-import dog from "./dog.png";
 import noodles1 from "./noodles1.jpg";
 import { useEffect } from "react";
-import { baseTheme } from "@/styles/styles";
-import { BackToTopButton } from "../../components/BackToTopButton";
-import { Lora } from "next/font/google";
 import { useTheme } from "@mui/material";
 
-import {
-  Instagram,
-  LinkedIn,
-  EmailOutlined,
-  LinkedInOutlined,
-  LinkedCameraOutlined,
-  Book,
-  Height,
-  RoundedCorner,
-} from "@mui/icons-material";
 import Aos from "aos";
 
 export default function AboutUs(theme) {
@@ -34,7 +19,9 @@ export default function AboutUs(theme) {
       color="primary"
       sx={{
         width: "100vw",
-        height: "90vh",
+        height: "auto",
+        padding: "100px 0px",
+        scrollMarginTop: "120px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

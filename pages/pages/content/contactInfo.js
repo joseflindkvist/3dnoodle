@@ -1,111 +1,86 @@
-import React from "react";
-import styled from "styled-components";
-import { Box, flexbox, width } from "@mui/system";
-import { TextField, Typography } from "@mui/material";
-import dog from "./dog.png";
-import noodles1 from "./noodles1.jpg";
-import { useEffect } from "react";
-import { baseTheme } from "@/styles/styles";
-import { BackToTopButton } from "../../components/BackToTopButton";
-import {
-  Instagram,
-  LinkedIn,
-  EmailOutlined,
-  LinkedInOutlined,
-  LinkedCameraOutlined,
-  Book,
-  Height,
-  RoundedCorner,
-} from "@mui/icons-material";
+import React, { useEffect } from "react";
+import { Box, Typography } from "@mui/material";
+import { EmailOutlined } from "@mui/icons-material";
 import Aos from "aos";
 
 export default function ContactInfo() {
   useEffect(() => {
     Aos.init({ duration: "2500" });
-  });
+  }, []);
+
   return (
     <Box
       id="contact"
       data-aos="fade"
       sx={{
         width: "100vw",
-        height: "75vh",
         display: "flex",
-        alignItems: "start",
-        justifyContent: "space-evenly",
-        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "50px 20px", // Reduce padding for a more compact design
+        backgroundColor: "#1a3b5d", // Light background color for contrast
       }}
     >
       <Box
-        id="text"
         sx={{
-          maxWidth: "70%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          color: "black",
-          p: "0px",
-          textAlign: "left",
-
-          fontSize: 20,
+          maxWidth: "800px",
+          width: "100%",
+          backgroundColor: "white", // Box background color
+          borderRadius: "15px", // Rounded corners
+          boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)", // Soft shadow for depth
+          padding: "30px", // Padding inside the box
         }}
       >
         <Typography
           sx={{
-            display: "flex",
-            justifyContent: "start",
             fontSize: 25,
+            display: "flex",
+            alignItems: "center",
             gap: "10px",
-            py: "30px",
+            marginBottom: "20px", // Space below the heading
+            fontWeight: "700",
+            color: "#23a6e5", // Match the primary color
           }}
         >
-          send us an email{" "}
+          Send us an email{" "}
           <a href="mailto:info@3dnoodle.com">
             <EmailOutlined
               fontSize="large"
-              color="primary"
-              sx={{ px: "0px" }}
+              color="#23a6e5"
+              sx={{ color: "#23a6e5", verticalAlign: "middle" }} // Align icon with middle of the text
             />
           </a>
         </Typography>
+
         <Box
           sx={{
-            display: "flex",
-            flexDirection: "column",
-
-            justifyContent: "start",
-            // gap: "0px 100px",
+            marginBottom: "20px",
+            color: "black",
           }}
         >
-          <Typography sx={{ fontFamily: [""], fontWeight: "700" }}>
-            contact:
+          <Typography sx={{ fontWeight: "700", marginBottom: "5px" }}>
+            Contact:
           </Typography>
           <Typography>info@3dnoodle.com</Typography>
         </Box>
 
         <Box
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            // alignContent: "start",
-            width: "100%",
-            py: "10px",
-
-            // justifyContent: "space-evenly",
-            // gap: "0px 100px",
+            marginBottom: "20px",
+            color: "black",
           }}
         >
-          <Typography sx={{ fontWeight: "700" }}>postal address:</Typography>
-
-          <Typography>Box 209 11479 Stockholm Sweden</Typography>
+          <Typography sx={{ fontWeight: "700", marginBottom: "5px" }}>
+            Postal Address:
+          </Typography>
+          <Typography>Box 209, 11479 Stockholm, Sweden</Typography>
         </Box>
 
         <Typography
           sx={{
-            py: "5px",
-            display: "flex",
-            justifyContent: "center",
-            fontStyle: "italic ",
+            textAlign: "center",
+            fontStyle: "italic",
+            color: "#666", // Slightly muted color for the names
           }}
         >
           Fredrik Winberg and Nandan Khokar

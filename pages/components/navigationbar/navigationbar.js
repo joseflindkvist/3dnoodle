@@ -110,7 +110,7 @@ export default function NavigationBar() {
                 // variant="contained"
 
                 onClick={() => {
-                  scrollElement("whynoodles");
+                  scrollElement("noodle-info");
                 }}
                 sx={{
                   p: "30px",

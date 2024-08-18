@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import { Box, Typography } from "@mui/material";
+import massa1 from "./massa1.png"; // Import the image
 
 export default function NewsPage() {
   useEffect(() => {
@@ -13,17 +14,41 @@ export default function NewsPage() {
       data-aos="fade"
       sx={{
         width: "100vw",
-        height: "100vh",
+        height: "auto",
+        padding: "80px 0px",
+        backgroundColor: "white", // Background color of the section
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        flexDirection: "reverse-row",
-        "@media (max-width: 768px)": { flexDirection: "column" },
+        flexDirection: "row",
+        "@media (max-width: 768px)": {
+          flexDirection: "column",
+          padding: "20px 0px",
+        },
       }}
     >
+      {/* Image Box */}
+      <Box
+        id="image"
+        component="img" // Using img tag
+        src={massa1.src} // Use the imported image
+        alt="Event Image" // Descriptive alt text
+        sx={{
+          maxWidth: "40%", // Adjust as needed
+          height: "auto",
+          // Optional: Shadow for a polished look
+          "@media (max-width: 768px)": {
+            maxWidth: "80%", // Adjust for smaller screens
+            marginBottom: "20px", // Space between image and text on smaller screens
+          },
+        }}
+      />
+
+      {/* Text Box */}
       <Box
         id="text"
         sx={{
+          backgroundColor: "#f9f9f9",
           maxWidth: "60%",
           display: "flex",
           flexDirection: "column",
@@ -33,7 +58,6 @@ export default function NewsPage() {
           textAlign: "left",
           borderRadius: "15px", // Rounded corners
           boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)", // Optional: shadow for a more polished look
-          backgroundColor: "#f9f9f9", // Background color
           "@media (max-width: 768px)": { maxWidth: "70%" },
         }}
       >

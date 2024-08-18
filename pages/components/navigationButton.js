@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Button } from "@mui/material";
+import { Block } from "@mui/icons-material";
 
 export default function NaviagtionButton(props) {
   function createbutton() {
@@ -18,7 +19,11 @@ export default function NaviagtionButton(props) {
   function scrollElement() {
     var element = props.element;
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest",
+      });
     }
   }
   return createbutton();

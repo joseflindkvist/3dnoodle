@@ -32,7 +32,6 @@ const MaintenancePage = () => {
       }}
     >
       <ThemeProvider theme={themeMain}>
-        <NewsPage />
         <NavigationBar />
         <ContentContainer />
         <BottomBar />
