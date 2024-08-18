@@ -7,7 +7,6 @@ export default function NewsPage() {
   useEffect(() => {
     Aos.init({ duration: "2500" });
   }, []);
-
   return (
     <Box
       id="news"
