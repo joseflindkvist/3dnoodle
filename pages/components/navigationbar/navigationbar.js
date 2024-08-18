@@ -108,7 +108,7 @@ export default function NavigationBar() {
               </Button>
               <Button
                 // variant="contained"
-                //textTransform="lowercase"
+
                 onClick={() => {
                   scrollElement("whynoodles");
                 }}
@@ -126,6 +126,7 @@ export default function NavigationBar() {
                 advantages
               </Button>
               <Button
+                // variant="contained"
                 onClick={() => {
                   scrollElement("contact");
                 }}
@@ -133,6 +134,7 @@ export default function NavigationBar() {
                   p: "30px",
                   //color: "black",
                   fontSize: "1.2em",
+                  fontFamily: "Poppins",
                   "@media (max-width: 768px)": {
                     fontSize: "3vw", // Adjust font size for smaller screens
                     p: "10px",

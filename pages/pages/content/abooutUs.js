@@ -31,6 +31,7 @@ export default function AboutUs(theme) {
     <Box
       id="aboutus"
       data-aos="fade-down"
+      color="primary"
       sx={{
         width: "100vw",
         height: "90vh",
@@ -59,7 +60,7 @@ export default function AboutUs(theme) {
             order: 2,
             maxWidth: "50%",
             flexDirection: "column",
-            marginTop: "15px",
+            marginTop: "60px",
           },
         }}
       ></Box>
@@ -77,11 +78,13 @@ export default function AboutUs(theme) {
           flexWrap: "wrap",
           "@media (max-width: 768px)": {
             maxWidth: "70%",
+            textAlign: "center",
           },
         }}
       >
         <Box>
           <Typography
+            color="black"
             sx={{
               fontSize: 25,
               py: "30px",
